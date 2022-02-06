@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"html:target/failed-html-report"},
         features = "@target/rerun.txt",
-        glue = "com/KEYPOINT/StepDefınatıons"
+        glue = "com/TaskRuut/Stepdefinations"
 )
 public class FailedTestRunner {
 

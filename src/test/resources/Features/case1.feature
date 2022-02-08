@@ -1,5 +1,5 @@
 @wip
-Feature:
+Feature:User uses the app features
 
   Background:
     Given the user go to web page
@@ -23,3 +23,4 @@ Feature:
     Scenario:the user should click the Screen Investor button
        Given the user clicks the "Screen Investor" button
        Then the user verify the text "People generate extra income by purchasing Ruut Smart Screens and having Ruut operate them across its vehicle network."
+

@@ -12,6 +12,11 @@ import org.openqa.selenium.By;
 
 public class Case1Steps extends TaskPage {
 TaskPage basePage=new TaskPage();
+    String actual;
+    String expected;
+    Log4j log = new Log4j();
+
+
 
     @Given("the user go to web page")
     public void theUserGoToWebPage() {
@@ -22,6 +27,9 @@ TaskPage basePage=new TaskPage();
          @When("the user clicks the apply button")
           public void the_user_clicks_the_apply_button() {
         basePage.applyBtn.click();
+             String actualTitle = Driver.get().getTitle();
+             String expectedTitle = "RUUT";
+             Assert.assertEquals(actualTitle, expectedTitle);
     }
 
          @Given("the user clicks the {string} button")
@@ -44,10 +52,14 @@ TaskPage basePage=new TaskPage();
             } else if (!actualtext.equals(expectedtext)) {
                 System.out.println(" Text are not  true");
             }
-
+            log.info(actual);
+            log.info(expected);
         }catch (Exception e){
-            BrowserUtils.waitForVisibility(Driver.get().findElement(By.xpath("//span[.='" + expectedtext + "']")),5);
+
+
+
         }
 
     }
+
 }
